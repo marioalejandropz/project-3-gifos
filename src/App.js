@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import "./App.css";
+import "./darkMode.css";
+import Header from "./components/Header/Header";
+import Search from "./components/Search/Search";
+import Results from "./components/Results/Results";
+import { AppContext } from "./context/AppContext";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    //Context
+    const { isDarkMode, setIsDarkMode } = useContext(AppContext);
+
+    //Handler
+    const darkModeHandler = () => {
+        setIsDarkMode(!isDarkMode);
+    };
+
+    return (
+        <main className={`App ${isDarkMode ? "darkMode" : "lightMode"}`}>
+            <div className="general-container">
+                <Header isDarkMode={isDarkMode} darkModeHandler={darkModeHandler} />
+                <Search />
+                <Results />
+            </div>
+        </main>
+    );
 }
-
-export default App;

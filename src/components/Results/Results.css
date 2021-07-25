@@ -1,0 +1,17 @@
+/* Responsive version */
+.gifs {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Desktop version */
+@media only screen and (min-width: 800px) {
+    .gifs {
+        width: 260px;
+        height: 260px;
+        margin: auto;
+        padding: 20px 0 10px 0;
+    }
+}

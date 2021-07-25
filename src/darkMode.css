@@ -1,0 +1,56 @@
+.App.darkMode {
+    background-color: rgb(44, 44, 44);
+    transition: background-color 0.5s ease;
+    height: 100vh;
+    overflow: auto;
+}
+
+.darkMode.general-container {
+    background-color: rgb(44, 44, 44);
+    transition: background-color 0.5s ease;
+    height: 100vh;
+}
+
+.darkMode .gifs-container {
+    background-color: #212121;
+    transition: background-color 0.5s ease;
+}
+
+.darkMode .btn {
+    transition: all 0.5s ease;
+    border: 1px solid #ffffff;
+    background-color: rgb(44, 44, 44);
+    color: #ffffff;
+}
+
+.darkMode .title,
+.darkMode .search-results-message,
+.darkMode ::placeholder {
+    color: #ffffff;
+    transition: all 0.25s ease;
+}
+
+.darkMode .search-bar-container {
+    transition: all 0.5s ease;
+    border: 1px solid #ffffff;
+}
+
+.darkMode .search-bar {
+    transition: all 0.5s ease;
+    background-color: rgb(44, 44, 44);
+    color: #ffffff;
+}
+
+.darkMode .icon-search-container {
+    border-left: 1px solid #ffffff;
+    transition: all 0.5s ease;
+}
+
+.darkMode .autocomplete {
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.darkMode .logo-desktop {
+    transition: all 0.5s ease;
+}
